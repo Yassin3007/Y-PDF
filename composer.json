@@ -1,0 +1,28 @@
+{
+    "name": "imar/headless-pdf",
+    "description": "Headless browser PDF generator for Laravel supporting full HTML/CSS/JS stacks.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0",
+        "illuminate/filesystem": "^10.0",
+        "illuminate/view": "^10.0",
+        "chrome-php/chrome": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Imar\\HeadlessPdf\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Imar\\HeadlessPdf\\HeadlessPdfServiceProvider"
+            ],
+            "aliases": {
+                "HeadlessPdf": "Imar\\HeadlessPdf\\Facades\\HeadlessPdf"
+            }
+        }
+    }
+}
