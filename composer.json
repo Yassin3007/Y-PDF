@@ -1,6 +1,6 @@
 {
-    "name": "imar/headless-pdf",
-    "description": "Headless browser PDF generator for Laravel supporting full HTML/CSS/JS stacks.",
+    "name": "y/ypdf",
+    "description": "Y-PDF: Headless browser PDF generator for Laravel supporting full HTML/CSS/JS stacks.",
     "type": "library",
     "license": "MIT",
     "require": {
@@ -12,16 +12,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Imar\\HeadlessPdf\\": "src/"
+            "YPdf\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Imar\\HeadlessPdf\\HeadlessPdfServiceProvider"
+                "YPdf\\YPdfServiceProvider"
             ],
             "aliases": {
-                "HeadlessPdf": "Imar\\HeadlessPdf\\Facades\\HeadlessPdf"
+                "YPdf": "YPdf\\Facades\\YPdf"
             }
         }
     }

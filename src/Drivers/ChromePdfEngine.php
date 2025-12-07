@@ -1,10 +1,10 @@
 <?php
 
-namespace Imar\HeadlessPdf\Drivers;
+namespace YPdf\Drivers;
 
 use HeadlessChromium\BrowserFactory;
 use HeadlessChromium\Page;
-use Imar\HeadlessPdf\Contracts\PdfEngine;
+use YPdf\Contracts\PdfEngine;
 use RuntimeException;
 
 class ChromePdfEngine implements PdfEngine

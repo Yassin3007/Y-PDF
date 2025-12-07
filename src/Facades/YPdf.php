@@ -1,6 +1,6 @@
 <?php
 
-namespace Imar\HeadlessPdf\Facades;
+namespace YPdf\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\Facade;
  * @method static string renderFromViewToFile(string $view, array $data, string $path, array $options = [])
  * @method static string renderFromUrlToFile(string $url, string $path, array $options = [])
  */
-class HeadlessPdf extends Facade
+class YPdf extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'headlesspdf';
+        return 'ypdf';
     }
 }

@@ -1,16 +1,16 @@
 <?php
 
-namespace Imar\HeadlessPdf;
+namespace YPdf;
 
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Filesystem\Filesystem;
-use Imar\HeadlessPdf\Contracts\PdfEngine;
-use Imar\HeadlessPdf\Drivers\ChromePdfEngine;
+use YPdf\Contracts\PdfEngine;
+use YPdf\Drivers\ChromePdfEngine;
 use InvalidArgumentException;
 
-class HeadlessPdfManager
+class YPdfManager
 {
     protected Repository $config;
 
@@ -33,7 +33,7 @@ class HeadlessPdfManager
             return $this->driver;
         }
 
-        $driverName = $this->config->get('headless-pdf.driver', 'chrome');
+        $driverName = $this->config->get('ypdf.driver', 'chrome');
 
         return $this->driver = $this->resolveDriver($driverName);
     }
@@ -41,7 +41,7 @@ class HeadlessPdfManager
     protected function resolveDriver(string $driverName): PdfEngine
     {
         return match ($driverName) {
-            'chrome' => new ChromePdfEngine($this->config->get('headless-pdf')),
+            'chrome' => new ChromePdfEngine($this->config->get('ypdf')),
             default => throw new InvalidArgumentException("Headless PDF driver [{$driverName}] is not supported."),
         };
     }

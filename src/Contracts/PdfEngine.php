@@ -1,6 +1,6 @@
 <?php
 
-namespace Imar\HeadlessPdf\Contracts;
+namespace YPdf\Contracts;
 
 interface PdfEngine
 {
