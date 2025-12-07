@@ -1,5 +1,5 @@
 {
-    "name": "y/ypdf",
+    "name": "imar/ypdf",
     "description": "Y-PDF: Headless browser PDF generator for Laravel supporting full HTML/CSS/JS stacks.",
     "type": "library",
     "license": "MIT",

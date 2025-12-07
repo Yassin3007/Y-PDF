@@ -30,7 +30,7 @@ packages/
 ## Installation (after publishing to Packagist)
 
 ```bash
-composer require y/ypdf
+composer require imar/ypdf
 php artisan vendor:publish --tag=ypdf-config
 ```
 
@@ -65,7 +65,7 @@ Need to render an authenticated page? Generate a signed URL and call `YPdf::rend
 1. Move `packages/imar/ypdf` into its own git repository (e.g., GitHub).
 2. Run `composer install` inside the package directory to pull dependencies.
 3. Tag a release and submit the repo to [packagist.org](https://packagist.org/).
-4. Back in your Laravel app, run `composer require y/ypdf`. Composer will pull the published package instead of the local path copy.
+4. Back in your Laravel app, run `composer require imar/ypdf`. Composer will pull the published package instead of the local path copy.
 
 ## Roadmap
 
