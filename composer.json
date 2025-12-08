@@ -8,7 +8,7 @@
         "illuminate/support": "^10.0",
         "illuminate/filesystem": "^10.0",
         "illuminate/view": "^10.0",
-        "chrome-php/chrome": "^2.3"
+        "chrome-php/chrome": "^1.15"
     },
     "autoload": {
         "psr-4": {
