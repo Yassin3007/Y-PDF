@@ -13,6 +13,12 @@ class ChromePdfEngine implements PdfEngine
 
     public function __construct(array $config)
     {
+        if (! class_exists(BrowserFactory::class)) {
+            throw new RuntimeException(
+                'ChromePdfEngine requires chrome-php/chrome. Run composer require chrome-php/chrome to enable this driver.'
+            );
+        }
+
         $this->config = $config;
     }
 

@@ -31,8 +31,16 @@ packages/
 
 ```bash
 composer require yassin/ypdf
+
+# Install the headless Chrome adapter only if you plan to use it
+composer require chrome-php/chrome
+
 php artisan vendor:publish --tag=ypdf-config
 ```
+
+Want to write your own driver or call a remote rendering API instead? Set `YPDF_DRIVER`
+to a custom driver name and bind an implementation of `YPdf\Contracts\PdfEngine` in a service
+provider—no Chromium dependency required.
 
 Ensure Chromium is installed on the server, or point `HEADLESS_PDF_CHROME_BINARY` to a bundled binary. Example `.env` entries:
 
